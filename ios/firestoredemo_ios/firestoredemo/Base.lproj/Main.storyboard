@@ -1,0 +1,97 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="firestoredemo" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="k3U-ya-LwH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="768"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="1ko-e8-lwH">
+                                        <rect key="frame" x="0.0" y="28" width="414" height="44"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="1ko-e8-lwH" id="lfG-AY-NMQ">
+                                            <rect key="frame" x="0.0" y="0.0" width="414" height="43.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="Dz5-Zq-P7s"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="AFa-6P-ADY"/>
+                                </connections>
+                            </tableView>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OaE-2r-0i6" userLabel="Compose View">
+                                <rect key="frame" x="0.0" y="812" width="414" height="50"/>
+                                <subviews>
+                                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter Your Message" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="qw6-cm-iWH">
+                                        <rect key="frame" x="8" y="10" width="344" height="30"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" keyboardType="emailAddress" returnKeyType="send"/>
+                                        <connections>
+                                            <action selector="onMessageSendClicked" destination="BYZ-38-t0r" eventType="primaryActionTriggered" id="Lt0-Dh-RxD"/>
+                                        </connections>
+                                    </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Czk-uk-AQM">
+                                        <rect key="frame" x="360" y="10" width="46" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="aF6-0f-YM9"/>
+                                            <constraint firstAttribute="height" constant="30" id="yqA-kr-hG2"/>
+                                        </constraints>
+                                        <state key="normal" title="Send">
+                                            <color key="titleShadowColor" red="0.5" green="0.5" blue="0.5" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="onMessageSendClicked" destination="BYZ-38-t0r" eventType="touchDown" id="CRN-QW-7MV"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" red="0.33333333329999998" green="0.33333333329999998" blue="0.33333333329999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="qw6-cm-iWH" firstAttribute="top" secondItem="OaE-2r-0i6" secondAttribute="top" constant="10" id="5Xw-0g-1yf"/>
+                                    <constraint firstItem="Czk-uk-AQM" firstAttribute="leading" secondItem="qw6-cm-iWH" secondAttribute="trailing" constant="8" id="6e4-z2-JRP"/>
+                                    <constraint firstItem="qw6-cm-iWH" firstAttribute="leading" secondItem="OaE-2r-0i6" secondAttribute="leading" constant="8" id="TA9-e6-NbE"/>
+                                    <constraint firstAttribute="trailing" secondItem="Czk-uk-AQM" secondAttribute="trailing" constant="8" id="Y5R-Ok-CUQ"/>
+                                    <constraint firstAttribute="height" constant="50" id="o8k-Xc-n9e"/>
+                                    <constraint firstItem="Czk-uk-AQM" firstAttribute="top" secondItem="OaE-2r-0i6" secondAttribute="top" constant="10" id="wOH-VN-RHD"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="k3U-ya-LwH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="MAv-KV-FAe"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="OaE-2r-0i6" secondAttribute="trailing" id="OEg-gj-IKL"/>
+                            <constraint firstItem="OaE-2r-0i6" firstAttribute="top" secondItem="k3U-ya-LwH" secondAttribute="bottom" id="PaZ-Ey-7WB"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="k3U-ya-LwH" secondAttribute="trailing" id="clB-mI-CKx"/>
+                            <constraint firstItem="OaE-2r-0i6" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="eRY-lv-q7o"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="OaE-2r-0i6" secondAttribute="bottom" id="h8o-PF-XbJ"/>
+                            <constraint firstItem="k3U-ya-LwH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="yi2-Ho-i76"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                    </view>
+                    <connections>
+                        <outlet property="messageInputView" destination="qw6-cm-iWH" id="0f7-kv-Oeh"/>
+                        <outlet property="tableView" destination="k3U-ya-LwH" id="dF9-Gg-XE8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="47.826086956521742" y="20.758928571428569"/>
+        </scene>
+    </scenes>
+</document>

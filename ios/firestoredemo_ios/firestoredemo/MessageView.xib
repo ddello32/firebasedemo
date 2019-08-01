@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="14490.70" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14490.49"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MessageCell" rowHeight="133" id="U1y-5l-Lav" customClass="MessageCell" customModule="firestoredemo" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="426" height="133"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="U1y-5l-Lav" id="dIn-4m-xco">
+                <rect key="frame" x="0.0" y="0.0" width="426" height="132.5"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="userName" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JeV-Jy-TsX">
+                        <rect key="frame" x="20" y="0.0" width="386" height="31.5"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleTitle1"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="message" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="o3L-af-wUY">
+                        <rect key="frame" x="20" y="31.5" width="386" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleBody"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" text="date" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J8i-2F-Rnv">
+                        <rect key="frame" x="20" y="55" width="386" height="21"/>
+                        <fontDescription key="fontDescription" style="UICTFontTextStyleCaption1"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+                <constraints>
+                    <constraint firstItem="o3L-af-wUY" firstAttribute="top" secondItem="JeV-Jy-TsX" secondAttribute="bottom" id="03J-S9-Mp8"/>
+                    <constraint firstItem="J8i-2F-Rnv" firstAttribute="top" secondItem="o3L-af-wUY" secondAttribute="bottom" id="16M-mW-Wx9"/>
+                    <constraint firstItem="J8i-2F-Rnv" firstAttribute="trailing" secondItem="dIn-4m-xco" secondAttribute="trailingMargin" id="5UH-Sf-rGv"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="o3L-af-wUY" secondAttribute="trailing" id="8K3-D2-aHm"/>
+                    <constraint firstItem="o3L-af-wUY" firstAttribute="leading" secondItem="dIn-4m-xco" secondAttribute="leadingMargin" id="BnH-CN-PxC"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="JeV-Jy-TsX" secondAttribute="trailing" id="J5I-Ci-VFQ"/>
+                    <constraint firstItem="J8i-2F-Rnv" firstAttribute="leading" secondItem="dIn-4m-xco" secondAttribute="leadingMargin" id="LBX-Yq-N2W"/>
+                    <constraint firstItem="JeV-Jy-TsX" firstAttribute="leading" secondItem="dIn-4m-xco" secondAttribute="leadingMargin" id="LW1-5S-eiX"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="J8i-2F-Rnv" secondAttribute="bottom" id="Qwt-Ry-XmJ"/>
+                    <constraint firstItem="JeV-Jy-TsX" firstAttribute="top" secondItem="dIn-4m-xco" secondAttribute="top" id="Wyg-c1-n9r"/>
+                    <constraint firstItem="o3L-af-wUY" firstAttribute="top" secondItem="JeV-Jy-TsX" secondAttribute="bottom" id="ePs-6c-cAv"/>
+                </constraints>
+            </tableViewCellContentView>
+            <connections>
+                <outlet property="date" destination="J8i-2F-Rnv" id="eX5-Ce-6Gs"/>
+                <outlet property="messageBody" destination="o3L-af-wUY" id="NM7-67-Uhc"/>
+                <outlet property="senderUsername" destination="JeV-Jy-TsX" id="xMK-WM-EBm"/>
+            </connections>
+            <point key="canvasLocation" x="317.39130434782612" y="-145.64732142857142"/>
+        </tableViewCell>
+    </objects>
+</document>
